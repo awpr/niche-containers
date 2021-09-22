@@ -31,13 +31,13 @@
 -- which takes the tail of the list and adds the contents of the @DList@ as a
 -- prefix.  This behaves nicely in small scopes like as the 'Monoid' of a
 -- 'foldMap', where GHC can optimize away the function entirely, but not so
--- nicely as a structure that's kept in memory for any significant time: it
--- can't have "honest" instances for classes like 'NFData', as everything has
--- to be done via conversion to lists.
+-- nicely as a structure that's kept in memory for any significant time: when
+-- using it as an actual materialized data structure for long-lived data, it
+-- can't be any denser than a list.
 --
 -- So, 'Catena' implements a similar in-memory structure to the tree of
 -- closures you would get from using @DList@, but using algebraic data types
--- rather than closures.  It also ultimately stores its elements in
+-- rather than closures.  It also ultimately prefers to store its elements in
 -- 'SmallArray's rather than in lists, to use fewer data constructors.
 --
 -- For those familiar with GHC's implementation, this is very similar to its
