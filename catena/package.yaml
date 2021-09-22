@@ -42,7 +42,39 @@ library:
   source-dirs: src
   exposed-modules:
     - Data.Catena
+  other-modules: []
 
   when:
     condition: false
     other-modules: Paths_catena
+
+benchmarks:
+  Catena-benchmark:
+    source-dirs: test
+    main: Benchmark.hs
+    other-modules: [Util]
+    dependencies:
+      - dlist
+      - gauge
+      - catena
+      - containers
+      - base
+
+    when:
+      condition: false
+      other-modules: Paths_catena
+
+  Catena-weigh:
+    source-dirs: test
+    main: WeighBenchmark.hs
+    other-modules: [Util]
+    dependencies:
+      - dlist
+      - catena
+      - containers
+      - base
+      - weigh
+
+    when:
+      condition: false
+      other-modules: Paths_catena

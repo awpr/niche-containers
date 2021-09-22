@@ -120,6 +120,7 @@ instance IsList (Catena a) where
   type Item (Catena a) = a
   toList = F.toList
   fromList = fromList
+  {-# INLINE fromListN #-}
   fromListN n = PackedR Empty . Exts.fromListN n
 
 instance Semigroup (Catena a) where

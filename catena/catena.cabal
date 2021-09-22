@@ -40,3 +40,45 @@ library
     , primitive >=0.6.4 && <0.8
     , wrapped ==0.1.*
   default-language: Haskell2010
+
+benchmark Catena-benchmark
+  type: exitcode-stdio-1.0
+  main-is: Benchmark.hs
+  other-modules:
+      Util
+  hs-source-dirs:
+      test
+  build-depends:
+      base
+    , catena
+    , cereal >=0.5.2 && <0.6
+    , containers
+    , deepseq ==1.4.*
+    , dlist
+    , gauge
+    , portray >=0.1.1 && <0.3
+    , portray-diff ==0.1.*
+    , primitive >=0.6.4 && <0.8
+    , wrapped ==0.1.*
+  default-language: Haskell2010
+
+benchmark Catena-weigh
+  type: exitcode-stdio-1.0
+  main-is: WeighBenchmark.hs
+  other-modules:
+      Util
+  hs-source-dirs:
+      test
+  build-depends:
+      base
+    , catena
+    , cereal >=0.5.2 && <0.6
+    , containers
+    , deepseq ==1.4.*
+    , dlist
+    , portray >=0.1.1 && <0.3
+    , portray-diff ==0.1.*
+    , primitive >=0.6.4 && <0.8
+    , weigh
+    , wrapped ==0.1.*
+  default-language: Haskell2010
