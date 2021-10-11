@@ -12,19 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-resolver: lts-18.10
+resolver: lts-14.27
 
 packages:
-- catena
-- keyed-containers
-- rle
-
-extra-deps:
-- attenuation-0.2.0
-- wrapped-0.1.0.0
-- portray-0.2.0
-- portray-diff-0.1.0.1
-- portray-prettyprinter-0.2.0 # Only to make it available to `stack repl`
-
-ghc-options:
-  "$locals": -Wall -Werror
+- indexed-traversable-0.1
