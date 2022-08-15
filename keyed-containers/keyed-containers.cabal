@@ -1,0 +1,53 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           keyed-containers
+version:        0.1.0
+synopsis:       Container wrappers with typed-key APIs
+description:    Wraps @IntMap@ and @IntSet@ in APIs that allow using newtypes over @Int@ for
+                their keys/indices.  (This is everything from @containers@ that's suitable
+                for this transformation).
+                .
+                Admittedly it's a bit weird to call this a "keyed" @IntSet@.  I haven't been
+                able to come up with a name that isn't worse.
+category:       Data Structures
+homepage:       https://github.com/google/hs-niche-containers#readme
+bug-reports:    https://github.com/google/hs-niche-containers/issues
+author:         Andrew Pritchard <awpr@google.com>
+maintainer:     Andrew Pritchard <awpr@google.com>
+copyright:      2021 Google LLC
+license:        Apache-2.0
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    CHANGELOG.md
+    src/Data/IntMap/Keyed/Impl.hs.inc
+
+source-repository head
+  type: git
+  location: https://github.com/google/hs-niche-containers
+  subdir: keyed-containers
+
+library
+  exposed-modules:
+      Data.IntMap.Keyed
+      Data.IntMap.Keyed.Lazy
+      Data.IntMap.Keyed.Strict
+      Data.IntSet.Keyed
+  other-modules:
+      Data.IntSet.Keyed.Internal
+  hs-source-dirs:
+      src
+  build-depends:
+      attenuation ==0.2.*
+    , base >=4.12 && <4.16
+    , containers ==0.6.*
+    , deepseq ==1.4.*
+    , indexed-traversable ==0.1.*
+    , portray >=0.1 && <0.3
+    , portray-diff ==0.1.*
+    , wrapped ==0.1.*
+  default-language: Haskell2010
