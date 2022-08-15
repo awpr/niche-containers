@@ -11,10 +11,10 @@ description:    Provides an @RLE@ type that stores a sequence of elements in the
                 length/value pairs, stored in a normal form with no adjacent runs of equal
                 values.
 category:       Data Structures
-homepage:       https://github.com/google/hs-rle#readme
-bug-reports:    https://github.com/google/hs-rle/issues
-author:         Andrew Pritchard <awpr@google.com>
-maintainer:     Andrew Pritchard <awpr@google.com>
+homepage:       https://github.com/awpr/niche-containers#readme
+bug-reports:    https://github.com/awpr/niche-containers/issues
+author:         Andrew Pritchard <awpritchard@gmail.com>
+maintainer:     Andrew Pritchard <awpritchard@gmail.com>
 copyright:      2019-2021 Google LLC
 license:        Apache-2.0
 license-file:   LICENSE
@@ -24,7 +24,8 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/google/hs-rle
+  location: https://github.com/awpr/niche-containers
+  subdir: rle
 
 library
   exposed-modules:

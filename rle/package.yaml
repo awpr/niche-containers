@@ -21,10 +21,10 @@ description: |
   length/value pairs, stored in a normal form with no adjacent runs of equal
   values.
 license: Apache-2.0
-author: Andrew Pritchard <awpr@google.com>
+author: Andrew Pritchard <awpritchard@gmail.com>
 copyright: 2019-2021 Google LLC
-maintainer: Andrew Pritchard <awpr@google.com>
-github: google/hs-rle
+maintainer: Andrew Pritchard <awpritchard@gmail.com>
+github: awpr/niche-containers/rle
 
 # Note: this causes CHANGELOG.md to be included in Hackage distributions.
 extra-source-files:

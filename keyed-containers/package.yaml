@@ -24,10 +24,10 @@ description: |
   Admittedly it's a bit weird to call this a "keyed" @IntSet@.  I haven't been
   able to come up with a name that isn't worse.
 license: Apache-2.0
-author: Andrew Pritchard <awpr@google.com>
+author: Andrew Pritchard <awpritchard@gmail.com>
 copyright: 2021 Google LLC
-maintainer: Andrew Pritchard <awpr@google.com>
-github: google/hs-niche-containers/keyed-containers
+maintainer: Andrew Pritchard <awpritchard@gmail.com>
+github: awpr/niche-containers/keyed-containers
 
 # Note: this causes CHANGELOG.md to be included in Hackage distributions.
 extra-source-files:

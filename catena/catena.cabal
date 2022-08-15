@@ -10,10 +10,10 @@ synopsis:       A concrete sequence type with O(1) concatenation.
 description:    A sequence type for long-term accumulation of many elements.  For more
                 details, see the <#readme README>.
 category:       Data Structures
-homepage:       https://github.com/google/hs-niche-containers#readme
-bug-reports:    https://github.com/google/hs-niche-containers/issues
-author:         Andrew Pritchard <awpr@google.com>
-maintainer:     Andrew Pritchard <awpr@google.com>
+homepage:       https://github.com/awpr/niche-containers#readme
+bug-reports:    https://github.com/awpr/niche-containers/issues
+author:         Andrew Pritchard <awpritchard@gmail.com>
+maintainer:     Andrew Pritchard <awpritchard@gmail.com>
 copyright:      2020-2021 Google LLC
 license:        Apache-2.0
 license-file:   LICENSE
@@ -23,7 +23,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/google/hs-niche-containers
+  location: https://github.com/awpr/niche-containers
   subdir: catena
 
 library

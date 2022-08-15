@@ -20,10 +20,10 @@ description: |
   A sequence type for long-term accumulation of many elements.  For more
   details, see the <#readme README>.
 license: Apache-2.0
-author: Andrew Pritchard <awpr@google.com>
+author: Andrew Pritchard <awpritchard@gmail.com>
 copyright: 2020-2021 Google LLC
-maintainer: Andrew Pritchard <awpr@google.com>
-github: google/hs-niche-containers/catena
+maintainer: Andrew Pritchard <awpritchard@gmail.com>
+github: awpr/niche-containers/catena
 
 # Note: this causes CHANGELOG.md to be included in Hackage distributions.
 extra-source-files:
