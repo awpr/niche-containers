@@ -1,4 +1,5 @@
 -- Copyright 2020-2021 Google LLC
+-- Copyright 2023 Andrew Pritchard
 --
 -- Licensed under the Apache License, Version 2.0 (the "License");
 -- you may not use this file except in compliance with the License.
@@ -57,7 +58,9 @@ module Data.Catena
 
 import Prelude hiding (concatMap)
 
+#if !MIN_VERSION_base(4,18,0)
 import Control.Applicative (Applicative(..))
+#endif
 import Control.Monad (liftM2)
 import qualified Data.Foldable as F
 import GHC.Exts (IsList)

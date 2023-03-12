@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.35.1.
 --
 -- see: https://github.com/sol/hpack
 
@@ -18,7 +18,7 @@ homepage:       https://github.com/awpr/niche-containers#readme
 bug-reports:    https://github.com/awpr/niche-containers/issues
 author:         Andrew Pritchard <awpritchard@gmail.com>
 maintainer:     Andrew Pritchard <awpritchard@gmail.com>
-copyright:      2021 Google LLC
+copyright:      2021 Google LLC; 2023 Andrew Pritchard
 license:        Apache-2.0
 license-file:   LICENSE
 build-type:     Simple
@@ -43,7 +43,7 @@ library
       src
   build-depends:
       attenuation ==0.2.*
-    , base >=4.12 && <4.16
+    , base >=4.12 && <4.19
     , containers ==0.6.*
     , deepseq ==1.4.*
     , indexed-traversable ==0.1.*

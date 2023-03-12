@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.35.1.
 --
 -- see: https://github.com/sol/hpack
 
@@ -33,7 +33,7 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.12 && <4.17
+      base >=4.12 && <4.19
     , cereal >=0.5.2 && <0.6
     , deepseq ==1.4.*
     , portray >=0.1.1 && <0.4
@@ -48,7 +48,7 @@ test-suite RLE-test
       test
   build-depends:
       QuickCheck
-    , base >=4.12 && <4.17
+    , base >=4.12 && <4.19
     , cereal >=0.5.2 && <0.6
     , deepseq ==1.4.*
     , portray >=0.1.1 && <0.4

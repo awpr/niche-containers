@@ -21,7 +21,7 @@ packages:
 
 extra-deps:
 - attenuation-0.2.0
-- wrapped-0.1.0.0
+- wrapped-0.1.0.1
 - portray-0.3.0
 - portray-diff-0.1.1
 - portray-prettyprinter-0.2.1 # Only to make it available to `stack repl`

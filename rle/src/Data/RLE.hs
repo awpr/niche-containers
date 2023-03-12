@@ -1,4 +1,5 @@
 -- Copyright 2019-2021 Google LLC
+-- Copyright 2023 Andrew Pritchard
 --
 -- Licensed under the Apache License, Version 2.0 (the "License");
 -- you may not use this file except in compliance with the License.
@@ -12,6 +13,7 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE DeriveFunctor #-}
 {-# LANGUAGE DeriveFoldable #-}
@@ -22,6 +24,7 @@
 {-# LANGUAGE TupleSections #-}
 {-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE TypeOperators #-} -- Required in GHC 9.4+ for `(~)`
 {-# LANGUAGE ViewPatterns #-}
 
 -- | A data type of run-length-encoded lists.
@@ -46,7 +49,9 @@ import Prelude hiding
          )
 import qualified Prelude as P
 
+#if !MIN_VERSION_base(4,18,0)
 import Control.Applicative (Applicative(..))
+#endif
 import Control.Monad (replicateM)
 import Data.Coerce (coerce)
 import Data.Functor.Contravariant (Contravariant(..))

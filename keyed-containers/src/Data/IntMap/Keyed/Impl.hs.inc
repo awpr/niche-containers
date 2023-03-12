@@ -1,4 +1,5 @@
 -- Copyright 2021 Google LLC
+-- Copyright 2023 Andrew Pritchard
 --
 -- Licensed under the Apache License, Version 2.0 (the "License");
 -- you may not use this file except in compliance with the License.
@@ -130,7 +131,7 @@ import Data.Portray (Portray)
 import Data.Traversable.WithIndex (TraversableWithIndex(..))
 import Data.Type.Attenuation
          ( type (⊆), Attenuable, Attenuation, Representational
-         , attenuate, attenuateWith, attenuation, coercible
+         , attenuate, attenuateWith, attenuation, coercible, domain
          )
 import Data.Type.Attenuation.Unsafe (unsafeSym, unsafeToCoercion)
 import Data.Wrapped (Wrapped(..))
@@ -644,9 +645,8 @@ traverseMaybeWithKeyNoRep
   => (k -> a -> f (Maybe b)) -> IntMap k a -> f (IntMap k b)
 #if MIN_VERSION_containers(0, 6, 4)
 traverseMaybeWithKeyNoRep f (IntMap m) =
-  -- GHC 9.0 does something weird with this and ends up picking an instance
-  -- that wants Coercible, unless we point it at @k@.  No idea why.
-  IntMap <$> attenuateIt @k @_ @((k -> _) -> _) (IM.traverseMaybeWithKey @f @a @b) f m
+  IntMap <$>
+  IM.traverseMaybeWithKey (attenuateWith (domain (unsafeAttToK @k)) f) m
 #else
 traverseMaybeWithKeyNoRep f = fmap (mapMaybe id) . traverseWithKeyNoRep f
 #endif

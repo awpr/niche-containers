@@ -1,4 +1,5 @@
 # Copyright 2021 Google LLC
+# Copyright 2023 Andrew Pritchard
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,7 +32,7 @@ extra-source-files:
   CHANGELOG.md
 
 dependencies:
-  - base >= 4.12 && < 4.17
+  - base >= 4.12 && < 4.19
   - cereal >= 0.5.2 && < 0.6
   - deepseq >= 1.4 && < 1.5
   - portray >= 0.1.1 && < 0.4
