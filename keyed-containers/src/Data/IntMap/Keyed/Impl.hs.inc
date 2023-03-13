@@ -131,7 +131,10 @@ import Data.Portray (Portray)
 import Data.Traversable.WithIndex (TraversableWithIndex(..))
 import Data.Type.Attenuation
          ( type (⊆), Attenuable, Attenuation, Representational
-         , attenuate, attenuateWith, attenuation, coercible, domain
+         , attenuate, attenuateWith, attenuation, coercible
+#if MIN_VERSION_containers(0, 6, 4)
+         , domain
+#endif
          )
 import Data.Type.Attenuation.Unsafe (unsafeSym, unsafeToCoercion)
 import Data.Wrapped (Wrapped(..))
