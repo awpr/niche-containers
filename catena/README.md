@@ -5,7 +5,9 @@ A sequence type with O(1) concatenation and concrete in-memory representation.
 This is similar to `DList` in many ways, but may perform better in some
 circumstances, particularly when GHC cannot inline and simplify away the
 function-based representation of `DList`, e.g. when the accumulation spans many
-modules.  For short-lived local accumulations, `DList` is likely to be better.
+modules.  For short-lived local accumulations, `DList` is likely to be better,
+because GHC is better at optimizing function structure out of existence compared
+to data constructors.
 
 When sequences are retained in memory for a long time, `Catena` is likely to be
 a better choice: because `DList` ultimately consists of closures over
